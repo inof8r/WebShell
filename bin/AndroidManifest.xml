@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.webshell"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="19" />
+
+   <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".MainActivity"
+                  android:label="@string/app_name" android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+ <activity
+            android:label="Klokker"
+            android:name=".NFCManager"  android:screenOrientation="portrait">
+        <intent-filter>
+    <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <data android:mimeType="text/plain" />
+</intent-filter>
+<intent-filter>    
+    <action android:name="android.nfc.action.TECH_DISCOVERED"/>
+    <action android:name="android.nfc.action.TAG_DISCOVERED"/>
+    <category android:name="android.intent.category.DEFAULT" />
+</intent-filter>   
+<meta-data android:name="android.nfc.action.NDEF_DISCOVERED" android:resource="@xml/filter_nfc"/>
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/filter_nfc"/>
+            <meta-data android:name="android.nfc.action.TAG_DISCOVERED" android:resource="@xml/filter_nfc"/> 
+  </activity> 
+          
+	
+       
+        
+    </application>
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />    
+    <uses-permission android:name="android.permission.NFC"/>    
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />    
+	<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+	<uses-permission android:name="android.permission.AUDIO" />
+	<uses-feature android:name="android.hardware.nfc" android:required="true" />
+</manifest>

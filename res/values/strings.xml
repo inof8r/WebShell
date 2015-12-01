@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WebShell</string>
+    <string name="webview">webview</string>    
+	<string name="app_loading">Loading</string>
+	<string name="app_url">https://www.busibox.nl/klokker/app/</string>
+	<string name="app_wwwroot">/</string>
+	<string name="reading_tag">Reading NFC tag...</string>
+
+</resources>
