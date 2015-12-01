@@ -17,27 +17,23 @@
             </intent-filter>
         </activity>
         
- <activity
-            android:label="Klokker"
-            android:name=".NFCManager"  android:screenOrientation="portrait">
-        <intent-filter>
-    <action android:name="android.nfc.action.NDEF_DISCOVERED" />
-    <category android:name="android.intent.category.DEFAULT" />
-    <data android:mimeType="text/plain" />
-</intent-filter>
-<intent-filter>    
-    <action android:name="android.nfc.action.TECH_DISCOVERED"/>
-    <action android:name="android.nfc.action.TAG_DISCOVERED"/>
-    <category android:name="android.intent.category.DEFAULT" />
-</intent-filter>   
-<meta-data android:name="android.nfc.action.NDEF_DISCOVERED" android:resource="@xml/filter_nfc"/>
+ 		<activity
+			android:label="Klokker"
+			android:name=".NFCManager"  android:screenOrientation="portrait">
+		<intent-filter>
+    		<action android:name="android.nfc.action.NDEF_DISCOVERED" />
+    		<category android:name="android.intent.category.DEFAULT" />
+    		<data android:mimeType="text/plain" />
+		</intent-filter>
+		<intent-filter>    
+    		<action android:name="android.nfc.action.TECH_DISCOVERED"/>
+    		<action android:name="android.nfc.action.TAG_DISCOVERED"/>
+    		<category android:name="android.intent.category.DEFAULT" />
+		</intent-filter>   
+			<meta-data android:name="android.nfc.action.NDEF_DISCOVERED" android:resource="@xml/filter_nfc"/>
             <meta-data android:name="android.nfc.action.TECH_DISCOVERED" android:resource="@xml/filter_nfc"/>
             <meta-data android:name="android.nfc.action.TAG_DISCOVERED" android:resource="@xml/filter_nfc"/> 
-  </activity> 
-          
-	
-       
-        
+  		</activity>         
     </application>
     
     <uses-permission android:name="android.permission.INTERNET" />
